@@ -852,9 +852,9 @@ function battleLoop(log, char1, char2, miss, atkStatus, i, mode, basic) {
   let t = 0;
   let cloop = [0, char1[2], char2[2]];
   if (mode == "turn" || mode == "loop-turn") {
-    t = 11;
+    t = 31;
   } else if (mode == "rt" || mode == "loop-rt") {
-    t = 6;
+    t = 16;
   }
 
   // Loop battle until one of character died
@@ -974,15 +974,18 @@ function battleLoop(log, char1, char2, miss, atkStatus, i, mode, basic) {
     }
 
     // Check if both character unable to damage each other after set of turn
-    if (char1[2] != cloop[1] && char2[2] != cloop[2]){
+    /* if (char1[2] != cloop[1] && char2[2] != cloop[2]){
       cloop[1] = char1[2];
       cloop[2] = char2[2];
       cloop[0] = i;
-    }
-
-    if (i >= t && t - cloop[0] >= t) {
+    } */
+    if (i < t && char1[2] == char1[1] && char2[2] == char2[1]){
       return log;
     }
+
+    /* if (i >= t && t - cloop[0] >= t) {
+      return log;
+    } */
   }
   return log;
 }
