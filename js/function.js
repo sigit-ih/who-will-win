@@ -979,7 +979,7 @@ function battleLoop(log, char1, char2, miss, atkStatus, i, mode, basic) {
       cloop[2] = char2[2];
       cloop[0] = i;
     } */
-    if (i < t && char1[2] == char1[1] && char2[2] == char2[1]){
+    if (i > t && char1[2] == char1[1] && char2[2] == char2[1]){
       return log;
     }
 
