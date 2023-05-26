@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>Who is more likely to win?</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" 
+    rel="stylesheet"
+    />
+
+    <!-- CSS & JS Script -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/class.js" defer></script>
+    <script src="js/classData.js" defer></script>
+    <script src="js/function.js" defer></script>
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <div class="time">
+
+        </div>
+        <div class="credit">
+          
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="main-title">
+          <h1>Who is more likely to win?</h1>
+          <h6>Source from <a href="https://battlersmath.blogspot.com/" target="_blank">this</a> blog</h6>
+        </div>
+        <div class="main-tab">
+          <button class="tab" onclick="openContent(event, 'mvk')">Minotaur vs Kobold</button>
+          <button class="tab" onclick="openContent(event, 'kvd')">Knight vs Dragon</button>
+          <button class="tab" onclick="openContent(event, 'wvs')">Wolf vs Sheep</button>
+          <button class="tab" onclick="openContent(event, 'pvw')">Peasant vs Werewolf</button>
+          <button class="tab" onclick="openContent(event, 'mvm')">Mage vs Mirror</button>
+          <button class="tab" onclick="openContent(event, 'cm')">Custom Match</button>
+        </div>
+        <div class="main-content-wrapper">
+          <div id="mvk" class="main-content">
+            <div class="content-title">
+              <h1>Minotaur vs Kobold</h1>
+              <h6>from <a href="assets/meme/minotaur-vs-kobold.png" target="_blank">this</a></h6>
+            </div>
+            <div class="logo">
+              <img src="assets/minotaur-symbol.png" alt="minotaur">
+            </div>
+            <div class="battle-logo">
+              <img src="assets/battle-symbol.png" alt="vs">
+            </div>
+            <div class="logo">
+              <img src="assets/kobold-symbol.png" alt="kobold">
+            </div>
+            <div class="stats-wrapper">
+              <div class="content-stats">
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/health-symbol.png" alt="hp" title="HP">
+                  </div>
+                  <div class="stats-num">
+                    <h3>1200</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/attack-symbol.png" alt="atk" title="ATK">
+                  </div>
+                  <div class="stats-num">
+                    <h3>100</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-symbol.png" alt="def" title="DEF">
+                  </div>
+                  <div class="stats-num">
+                    <h3>20</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/evasion-symbol.png" alt="eva" title="EVA">
+                  </div>
+                  <div class="stats-num">
+                    <h3>0%</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="content-stats">
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/health-symbol.png" alt="hp" title="HP">
+                  </div>
+                  <div class="stats-num">
+                    <h3>200</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/attack-symbol.png" alt="atk" title="ATK">
+                  </div>
+                  <div class="stats-num">
+                    <h3>30</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-symbol.png" alt="def" title="DEF">
+                  </div>
+                  <div class="stats-num">
+                    <h3>10</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/evasion-symbol.png" alt="eva" title="EVA">
+                  </div>
+                  <div class="stats-num">
+                    <h3>95%</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-break-symbol.png" alt="defbreak" title="Defense Break">
+                  </div>
+                  <div class="stats-num">
+                    <h3>50%</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-rules">
+              <h3>Rules</h3>
+              <ul>
+                <li>Damage = &nbsp;<span><img class="span-icon" src="assets/attack-symbol.png" alt="atk" title="ATK"></span>&nbsp; - &nbsp;<span><img class="span-icon" src="assets/defense-symbol.png" alt="def" title="DEF"></span></li>
+                <li>Both character attack simultaneously</li>
+              </ul>
+            </div>
+            <div class="content-button">
+              <div>
+                <button class="fight 01" onclick="runBattleSimulation(this)">FIGHT!</button>
+              </div>
+              <div>
+                <input type="text" class="input 01" name="roundCount">
+                <p class="input-warning 01"></p>
+                <button class="round 01" onclick="runBattleSimulation(this)">FIGHT (ROUND)!</button>
+              </div>
+            </div>
+            <div class="content-result">
+              <h3>Battle Log</h3>
+              <div class="content-log 01">
+                <h6 class="log-title 01"> </h6>
+                <p class="log-battle 01"></p>
+              </div>
+            </div>
+          </div>
+          <div id="kvd" class="main-content">
+            <div class="content-title">
+              <h1>Knight vs Dragon</h1>
+              <h6>from <a href="assets/meme/knight-vs-dragon.png" target="_blank">this</a></h6>
+            </div>
+            <div class="logo">
+              <img src="assets/knight-symbol.png" alt="knight">
+            </div>
+            <div class="battle-logo">
+              <img src="assets/battle-symbol.png" alt="vs">
+            </div>
+            <div class="logo">
+              <img src="assets/dragon-symbol.png" alt="dragon">
+            </div>
+            <div class="stats-wrapper">
+              <div class="content-stats">
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/health-symbol.png" alt="hp" title="HP">
+                  </div>
+                  <div class="stats-num">
+                    <h3>300</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/attack-symbol.png" alt="atk" title="ATK">
+                  </div>
+                  <div class="stats-num">
+                    <h3>80</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-symbol.png" alt="def" title="DEF">
+                  </div>
+                  <div class="stats-num">
+                    <h3>30</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/evasion-symbol.png" alt="eva" title="EVA">
+                  </div>
+                  <div class="stats-num">
+                    <h3>90%</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/critical-symbol.png" alt="crit" title="Critical Attack">
+                  </div>
+                  <div class="stats-num">
+                    <h3>33%, 3x <span><img class="span-icon" src="assets/damage-symbol.png" alt="dmg" title="Damage"></span></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="content-stats">
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/health-symbol.png" alt="hp" title="HP">
+                  </div>
+                  <div class="stats-num">
+                    <h3>1500</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/attack-symbol.png" alt="atk" title="ATK">
+                  </div>
+                  <div class="stats-num">
+                    <h3>120</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-symbol.png" alt="def" title="DEF">
+                  </div>
+                  <div class="stats-num">
+                    <h3>60</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/evasion-symbol.png" alt="eva" title="EVA">
+                  </div>
+                  <div class="stats-num">
+                    <h3>0%</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/instant-death-symbol.png" alt="instadeath" title="Instant Death">
+                  </div>
+                  <div class="stats-num">
+                    <h3>25%</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-rules">
+              <h3>Rules</h3>
+              <ul>
+                <li>Damage = &nbsp;<span><img class="span-icon" src="assets/attack-symbol.png" alt="atk" title="ATK"></span>&nbsp; - &nbsp;<span><img class="span-icon" src="assets/defense-symbol.png" alt="def" title="DEF"></span></li>
+                <li>Both character attack simultaneously</li>
+              </ul>
+            </div>
+            <div class="content-button">
+              <div>
+                <button class="fight 02" onclick="runBattleSimulation(this)">FIGHT!</button>
+              </div>
+              <div>
+                <input type="text" class="input 02" name="roundCount">
+                <p class="input-warning 02"></p>
+                <button class="round 02" onclick="runBattleSimulation(this)">FIGHT (ROUND)!</button>
+              </div>
+            </div>
+            <div class="content-result">
+              <h3>Battle Log</h3>
+              <div class="content-log 02">
+                <h6 class="log-title 02"> </h6>
+                <p class="log-battle 02"></p>
+              </div>
+            </div>
+          </div>
+          <div id="wvs" class="main-content">
+            <div class="content-title">
+              <h1>Wolf vs Sheep</h1>
+              <h6>from <a href="assets/meme/wolf-vs-sheep.png" target="_blank">this</a></h6>
+            </div>
+            <div class="logo">
+              <img src="assets/wolf-symbol.png" alt="wolf">
+            </div>
+            <div class="battle-logo">
+              <img src="assets/battle-symbol.png" alt="vs">
+            </div>
+            <div class="logo">
+              <img src="assets/sheep-symbol.png" alt="sheep">
+            </div>
+            <div class="stats-wrapper">
+              <div class="content-stats">
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/health-symbol.png" alt="hp" title="HP">
+                  </div>
+                  <div class="stats-num">
+                    <h3>500</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/attack-symbol.png" alt="atk" title="ATK">
+                  </div>
+                  <div class="stats-num">
+                    <h3>80</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-symbol.png" alt="def" title="DEF">
+                  </div>
+                  <div class="stats-num">
+                    <h3>30</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/evasion-symbol.png" alt="eva" title="EVA">
+                  </div>
+                  <div class="stats-num">
+                    <h3>66%</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/bleeding-symbol.png" alt="bleed" title="Bleeding">
+                  </div>
+                  <div class="stats-num">
+                    <h3>75%, 15 <span><img class="span-icon" src="assets/damage-symbol.png" alt="dmg" title="Damage"></span> per Turn</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="content-stats">
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/health-symbol.png" alt="hp" title="HP">
+                  </div>
+                  <div class="stats-num">
+                    <h3>300</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/attack-symbol.png" alt="atk" title="ATK">
+                  </div>
+                  <div class="stats-num">
+                    <h3>60</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-symbol.png" alt="def" title="DEF">
+                  </div>
+                  <div class="stats-num">
+                    <h3>20</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/evasion-symbol.png" alt="eva" title="EVA">
+                  </div>
+                  <div class="stats-num">
+                    <h3>50%</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/rage-symbol.png" alt="rage" title="Rage">
+                  </div>
+                  <div class="stats-num">
+                    <h3>Increase 90 <span><img class="span-icon" src="assets/attack-symbol.png" alt="atk" title="ATK"></span>, 20 <span><img class="span-icon" src="assets/defense-symbol.png" alt="def" title="DEF"></span>, and 25% <span><img class="span-icon" src="assets/evasion-symbol.png" alt="eva" title="EVA"></span> per <span><img class="span-icon" src="assets/bleeding-symbol.png" alt="bleed" title="Bleeding"></span> Bleeding level</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-rules">
+              <h3>Rules</h3>
+              <ul>
+                <li>Damage = &nbsp;<span><img class="span-icon" src="assets/attack-symbol.png" alt="atk" title="ATK"></span>&nbsp; - &nbsp;<span><img class="span-icon" src="assets/defense-symbol.png" alt="def" title="DEF"></span></li>
+                <li>A bleeding wound causes 15 &nbsp;<span><img class="span-icon" src="assets/damage-symbol.png" alt="dmg" title="Damage"></span>&nbsp; per turn and lasts forever, damage starts ticking in the next turn after wound is inflicted</li>
+                <li>Each bleeding wound boosts the sheep's &nbsp;<span><img class="span-icon" src="assets/attack-symbol.png" alt="atk" title="ATK"></span>&nbsp; by 90, &nbsp;<span><img class="span-icon" src="assets/defense-symbol.png" alt="def" title="DEF"></span>&nbsp; by 20 and gives him a 25% bonus chance to &nbsp;<span><img class="span-icon" src="assets/evasion-symbol.png" alt="eva" title="EVA"></span></li>
+                <li>Whoever kills the other first is considered the winner, regardless of what happens after the battle</li>
+                <li>The sheep has accepted his death as the most likely outcome, but he's determined to kill the wolf before bleeding out</li>
+              </ul>
+            </div>
+            <div class="content-button">
+              <div>
+                <button class="fight 03" onclick="runBattleSimulation(this)">FIGHT!</button>
+              </div>
+              <div>
+                <input type="text" class="input 03" name="roundCount">
+                <p class="input-warning 03"></p>
+                <button class="round 03" onclick="runBattleSimulation(this)">FIGHT (ROUND)!</button>
+              </div>
+            </div>
+            <div class="content-result">
+              <h3>Battle Log</h3>
+              <div class="content-log 03">
+                <h6 class="log-title 03"> </h6>
+                <p class="log-battle 03"></p>
+              </div>
+            </div>
+          </div>
+          <div id="pvw" class="main-content">
+            <div class="content-title">
+              <h1>Peasant vs Werewolf</h1>
+              <h6>from <a href="assets/meme/peasant-vs-werewolf.png" target="_blank">this</a></h6>
+            </div>
+            <div class="logo">
+              <img src="assets/peasant-symbol.png" alt="peasant">
+            </div>
+            <div class="battle-logo">
+              <img src="assets/battle-symbol.png" alt="vs">
+            </div>
+            <div class="logo">
+              <img src="assets/werewolf-symbol.png" alt="werewolf">
+            </div>
+            <div class="stats-wrapper">
+              <div class="content-stats">
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/health-symbol.png" alt="hp" title="HP">
+                  </div>
+                  <div class="stats-num">
+                    <h3>500</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/attack-symbol.png" alt="atk" title="ATK">
+                  </div>
+                  <div class="stats-num">
+                    <h3>70</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-symbol.png" alt="def" title="DEF">
+                  </div>
+                  <div class="stats-num">
+                    <h3>40</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/evasion-symbol.png" alt="eva" title="EVA">
+                  </div>
+                  <div class="stats-num">
+                    <h3>75%</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/repeat-attack-symbol.png" alt="repeat" title="Repeated Attack">
+                  </div>
+                  <div class="stats-num">
+                    <h3>50%, 4 times in a row (still takes into account <span><img class="span-icon" src="assets/evasion-symbol.png" alt="eva" title="EVA"></span> Evasion)</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="content-stats">
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/health-symbol.png" alt="hp" title="HP">
+                  </div>
+                  <div class="stats-num">
+                    <h3>1000</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/attack-symbol.png" alt="atk" title="ATK">
+                  </div>
+                  <div class="stats-num">
+                    <h3>90</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-symbol.png" alt="def" title="DEF">
+                  </div>
+                  <div class="stats-num">
+                    <h3>50</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/evasion-symbol.png" alt="eva" title="EVA">
+                  </div>
+                  <div class="stats-num">
+                    <h3>20%</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-break-symbol.png" alt="defbreak" title="Defense Break">
+                  </div>
+                  <div class="stats-num">
+                    <h3>25%</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/werewolf-symbol.png" alt="convert" title="Convert">
+                  </div>
+                  <div class="stats-num">
+                    <h3>33% (after <span><img class="span-icon" src="assets/defense-break-symbol.png" alt="defbreak" title="Defense Break"></span> Defense Break)</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-rules">
+              <h3>Rules</h3>
+              <ul>
+                <li>Damage = &nbsp;<span><img class="span-icon" src="assets/attack-symbol.png" alt="atk" title="ATK"></span>&nbsp; - &nbsp;<span><img class="span-icon" src="assets/defense-symbol.png" alt="def" title="DEF"></span></li>
+                <li>Both character attack simultaneously</li>
+                <li>If the peasant turns into a werewolf, he loses immediately</li>
+              </ul>
+            </div>
+            <div class="content-button">
+              <div>
+                <button class="fight 04" onclick="runBattleSimulation(this)">FIGHT!</button>
+              </div>
+              <div>
+                <input type="text" class="input 04" name="roundCount">
+                <p class="input-warning 04"></p>
+                <button class="round 04" onclick="runBattleSimulation(this)">FIGHT (ROUND)!</button>
+              </div>
+            </div>
+            <div class="content-result">
+              <h3>Battle Log</h3>
+              <div class="content-log 04">
+                <h6 class="log-title 04"> </h6>
+                <p class="log-battle 04"></p>
+              </div>
+            </div>
+          </div>
+          <div id="mvm" class="main-content">
+            <div class="content-title">
+              <h1>Mage vs Mirror</h1>
+              <h6>from <a href="assets/meme/mage-vs-mirror.png" target="_blank">this</a></h6>
+            </div>
+            <div class="logo">
+              <img src="assets/mage-symbol.png" alt="mage">
+            </div>
+            <div class="battle-logo">
+              <img src="assets/battle-symbol.png" alt="vs">
+            </div>
+            <div class="logo">
+              <img src="assets/mirror-symbol.png" alt="mirror">
+            </div>
+            <div class="stats-wrapper">
+              <div class="content-stats">
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/health-symbol.png" alt="hp" title="HP">
+                  </div>
+                  <div class="stats-num">
+                    <h3>200</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/attack-symbol.png" alt="atk" title="ATK">
+                  </div>
+                  <div class="stats-num">
+                    <h3>100</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-symbol.png" alt="def" title="DEF">
+                  </div>
+                  <div class="stats-num">
+                    <h3>20</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/evasion-symbol.png" alt="eva" title="EVA">
+                  </div>
+                  <div class="stats-num">
+                    <h3>50%</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/instant-death-symbol.png" alt="instadeath" title="Instant Death">
+                  </div>
+                  <div class="stats-num">
+                    <h3>33%</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="content-stats">
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/health-symbol.png" alt="hp" title="HP">
+                  </div>
+                  <div class="stats-num">
+                    <h3>100</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/attack-symbol.png" alt="atk" title="ATK">
+                  </div>
+                  <div class="stats-num">
+                    <h3>0</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-symbol.png" alt="def" title="DEF">
+                  </div>
+                  <div class="stats-num">
+                    <h3>10</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/evasion-symbol.png" alt="eva" title="EVA">
+                  </div>
+                  <div class="stats-num">
+                    <h3>0%</h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/reflect-symbol.png" alt="reflect" title="Reflect">
+                  </div>
+                  <div class="stats-num">
+                    <h3>66%</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-rules">
+              <h3>Rules</h3>
+              <ul>
+                <li>Damage = &nbsp;<span><img class="span-icon" src="assets/attack-symbol.png" alt="atk" title="ATK"></span>&nbsp; - &nbsp;<span><img class="span-icon" src="assets/defense-symbol.png" alt="def" title="DEF"></span></li>
+                <li>Turn-based, mage begins first</li>
+                <li>Power bolts is not affected by reflection</li>
+                <li>It's a magic mirror so it's immune to physical attacks</li>
+                <li>Mage sucks and only knows one spell : lightning bolt</li>
+              </ul>
+            </div>
+            <div class="content-button">
+              <div>
+                <button class="fight 05" onclick="runBattleSimulation(this)">FIGHT!</button>
+              </div>
+              <div>
+                <input type="text" class="input 05" name="roundCount">
+                <p class="input-warning 05"></p>
+                <button class="round 05" onclick="runBattleSimulation(this)">FIGHT (ROUND)!</button>
+              </div>
+            </div>
+            <div class="content-result">
+              <h3>Battle Log</h3>
+              <div class="content-log 05">
+                <h6 class="log-title 05"> </h6>
+                <p class="log-battle 05"></p>
+              </div>
+            </div>
+          </div>
+          <div id="cm" class="main-content">
+            <div class="content-title">
+              <h1>Custom Match</h1>
+              <h6>Create your own match!</h6>
+            </div>
+            <div class="option">
+              <div class="select">
+                <select id="player1">
+                  <option value="Minotaur" selected>Minotaur</option>
+                  <option value="Kobold">Kobold</option>
+                  <option value="Knight">Knight</option>
+                  <option value="Dragon">Dragon</option>
+                  <option value="Wolf">Wolf</option>
+                  <option value="Sheep">Sheep</option>
+                  <option value="Peasant">Peasant</option>
+                  <option value="Werewolf">Werewolf</option>
+                  <option value="Mage">Mage</option>
+                  <option value="Mirror">Mirror</option>
+                </select>
+                <span class="focus"></span>
+              </div>
+            </div>
+            <div class="turn">
+              <div class="select">
+                <select id="mode">
+                  <option value="rt" selected>Simultaneously</option>
+                  <option value="turn">Turn-based</option>
+                </select>
+                <span class="focus"></span>
+              </div>
+            </div>
+            <div class="option">
+              <div class="select">
+                <select id="player2">
+                  <option value="Minotaur" selected>Minotaur</option>
+                  <option value="Kobold">Kobold</option>
+                  <option value="Knight">Knight</option>
+                  <option value="Dragon">Dragon</option>
+                  <option value="Wolf">Wolf</option>
+                  <option value="Sheep">Sheep</option>
+                  <option value="Peasant">Peasant</option>
+                  <option value="Werewolf">Werewolf</option>
+                  <option value="Mage">Mage</option>
+                  <option value="Mirror">Mirror</option>
+                </select>
+                <span class="focus"></span>
+              </div>
+            </div>
+            <div class="choose">
+              <button class="matchmaker" onclick="selectChar()">Select Characters</button>
+            </div>
+            <div id="content-title-choose"></div>
+            <div class="logo">
+              <img src="assets/character-symbol.png" alt="player_1">
+            </div>
+            <div class="battle-logo">
+              <img src="assets/battle-symbol.png" alt="vs">
+            </div>
+            <div class="logo">
+              <img src="assets/character-symbol.png" alt="player_2">
+            </div>
+            <div class="stats-wrapper">
+              <div class="content-stats">
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/health-symbol.png" alt="hp" title="HP">
+                  </div>
+                  <div class="stats-num">
+                    <h3 id="hp1"></h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/attack-symbol.png" alt="atk" title="ATK">
+                  </div>
+                  <div class="stats-num">
+                    <h3 id="atk1"></h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-symbol.png" alt="def" title="DEF">
+                  </div>
+                  <div class="stats-num">
+                    <h3 id="def1"></h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/evasion-symbol.png" alt="eva" title="EVA">
+                  </div>
+                  <div class="stats-num">
+                    <h3 id="eva1"></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="content-stats">
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/health-symbol.png" alt="hp" title="HP">
+                  </div>
+                  <div class="stats-num">
+                    <h3 id="hp2"></h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/attack-symbol.png" alt="atk" title="ATK">
+                  </div>
+                  <div class="stats-num">
+                    <h3 id="atk2"></h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/defense-symbol.png" alt="def" title="DEF">
+                  </div>
+                  <div class="stats-num">
+                    <h3 id="def2"></h3>
+                  </div>
+                </div>
+                <div class="stats-desc">
+                  <div class="stats-icon">
+                    <img src="assets/evasion-symbol.png" alt="eva" title="EVA">
+                  </div>
+                  <div class="stats-num">
+                    <h3 id="eva2"></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-rules">
+              <h3>Rules</h3>
+              <ul id="rule-list"></ul>
+            </div>
+            <div class="content-button">
+              <div>
+                <button class="fight custom0" onclick="runBattleSimulation(this)">FIGHT!</button>
+              </div>
+              <div>
+                <input type="text" class="input custom0" name="roundCount">
+                <p class="input-warning custom0"></p>
+                <button class="round custom0" onclick="runBattleSimulation(this)">FIGHT (ROUND)!</button>
+              </div>
+            </div>
+            <div class="content-result">
+              <h3>Battle Log</h3>
+              <div class="content-log custom0">
+                <h6 class="log-title custom0"> </h6>
+                <p class="log-battle custom0"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer></footer>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,372 @@
+:root {
+  --select-border: gray;
+  --select-focus: #9f1c27;
+  --select-arrow: var(--select-border);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+
+  body {
+    font-family: "Poppins", sans-serif;
+
+    a {
+      font-size: 1rem;
+      color: #9f1c27;
+  
+      &:hover {
+        color: #13133e;
+      }
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    h3 {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  
+    h6 {
+      font-size: 1rem;
+    }
+
+    select {
+      // A reset of styles, including removing the default dropdown arrow
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      padding: 0 1em 0 0;
+      margin: 0;
+      width: 100%;
+      font-family: inherit;
+      font-size: inherit;
+      cursor: inherit;
+      line-height: inherit;
+
+      // Stack above custom arrow
+      z-index: 1;
+
+      // Remove dropdown arrow in IE10 & IE11
+      // @link https://www.filamentgroup.com/lab/select-css.html
+      &::-ms-expand {
+        display: none;
+      }
+
+      // Remove focus outline, will add on alternate element
+      outline: none;
+    }
+
+    .select {
+      display: grid;
+      grid-template-areas: "select";
+      align-items: center;
+      position: relative;
+
+      select,
+      &::after {
+        grid-area: select;
+      }
+
+      max-width: 300px;
+      border: 1px solid var(--select-border);
+      border-radius: 0.25em;
+      margin: auto auto;
+      padding: 0.4em 0.8em;
+      font-size: 1.25rem;
+      cursor: pointer;
+      line-height: 1.1;
+      background-color: #f1f1f1;
+
+      &:not(.select--multiple)::after {
+        content: "";
+        justify-self: end;
+        width: 0.8em;
+        height: 0.5em;
+        background-color: var(--select-arrow);
+        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+      }
+    }
+
+    // Interim solution until :focus-within has better support
+    select:focus + .focus {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      bottom: -1px;
+      border: 2px solid var(--select-focus);
+      border-radius: inherit;
+    }
+
+    .container {
+      max-width: 65rem;
+      margin: 5rem auto;
+      text-align: center;
+      
+      .main-title {
+        margin-bottom: 1.5rem;
+      }
+
+      .main-tab {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        border: solid 2px gray;
+        background-color: #f1f1f1;
+        max-width: 100%;
+
+        .tab {
+          flex: auto;
+          background-color: inherit;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 1.2rem; 
+
+          &:hover {
+            background-color: #ddd; 
+          }
+
+          &.active {
+            background-color: #13133e;
+            color: white;
+            font-weight: bold;
+          }
+        }
+      } 
+
+      .main-content-wrapper {
+        border: solid 2px gray;
+        border-top: none;
+        padding: 2%;
+        min-height: 81.25em;
+
+        .main-content {
+          display: none;
+          flex-wrap: wrap;
+          justify-content: space-between;
+  
+          .content-title, #content-title-choose {
+            width: 100%;
+            margin-bottom: 1.5rem;
+          }
+
+          .test {
+            width: 100%;
+          }
+          
+          @mixin logo($width: 37.5%) {
+            width: $width;
+            img {
+              max-height: 5rem;
+              vertical-align: middle
+            }
+          }
+
+          .option {
+            @include logo;
+            margin-bottom: 1rem;
+          }
+
+          .turn {
+            @include logo(23%); 
+          }
+
+          .choose {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+
+            .matchmaker, .matchmaker2 {
+              width: 25%;
+              display: inline-block;
+              padding: 0.75rem 1.5rem;
+              font-size: 1rem;
+              font-weight: bold;
+              text-align: center;
+              background-color: #f1f1f1;
+              border-radius: 0.5rem;
+              cursor: pointer;
+              transition: all 0.3s;
+  
+              &:hover {
+                background-color: #ddd; 
+              }
+            }
+          }
+  
+          .logo {
+            @include logo;
+            margin-bottom: 1rem;
+          }
+  
+          .battle-logo {
+            @include logo(20%);
+          }
+  
+          .stats-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+  
+            .content-stats {
+              width: 40%;
+              padding: 2.5%;
+              display: flex;
+              flex-direction: column;
+              border: solid 1px #ccc;
+              border-radius: 1rem;
+              gap: 1.2rem;
+              
+              .stats-desc {
+                width: 100%;
+                display: flex;
+                min-height: 52px;
+  
+                .stats-icon {
+                  width: 30%;
+                  position: relative;
+    
+                  img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    max-height: 3rem;
+                  }
+                }
+                .stats-num {
+                  width: 70%;
+                  display: table;
+  
+                  h3 {
+                    margin: 10px;
+                    display: table-cell;
+                    vertical-align:middle;
+  
+                    .span-icon {
+                      max-height: 2rem;
+                      vertical-align: middle;
+                    }
+                  }
+                }
+              }
+            }
+          }
+  
+          .content-rules {
+            width: 100%;
+            margin: 2rem 0;
+            padding: 2.5%;
+            border: solid 1px #ccc;
+            border-radius: 1rem;
+  
+            h3 {
+              margin-bottom: 0.75rem;
+            }
+  
+            h6, li {
+              text-align: left;
+  
+              img {
+                max-height: 1.2rem;
+                vertical-align: middle;
+              }
+            }
+          }
+  
+          .content-button {
+            width: 100%;
+            text-align: center;
+            margin: 0 0 1.2rem 0;
+            display: flex;
+  
+            div {
+              flex: auto;
+  
+              input {
+                width: 40%;
+                padding: 1.5% 3%;
+                border: solid 1px #ccc;
+                border-radius: 0.5rem;
+                font-size: 1rem;
+                color: rgb(100, 100, 100);
+              }
+
+              .input-warning {
+                margin-bottom: 10px;
+                color: red;
+              }
+  
+              .fight, .round {
+                width: 40%;
+                display: inline-block;
+                padding: 0.6rem 1.2rem;
+                font-size: 1rem;
+                font-weight: bold;
+                text-align: center;
+                background-color: #f1f1f1;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                transition: all 0.3s;
+    
+                &:hover {
+                  background-color: #ddd; 
+                }
+              }
+            }
+          }
+  
+          .content-result {
+            width: 100%;
+            text-align: center;
+            margin: 0.3rem;
+            padding: 2.5%;
+            font-size: 1rem;
+            border: solid 1px #ccc;
+            border-radius: 1rem;
+            min-height: 25.5rem;
+  
+            img {
+              height: 14px;
+            }
+  
+            .content-log{
+              height: 86%;
+  
+              .log-title{
+                margin-bottom: 1rem;
+              }
+  
+              .log-battle{
+                font-family: 'Fira Code', monospace;
+                padding: 2.5%;
+                border: solid 1px #ccc;
+                height: 16.5em;
+                overflow-x: hidden;
+                overflow-y: auto;
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+
+      footer {
+        margin-top: 1rem;
+        bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  scroll-behavior: smooth; }
+  * h1 {
+    font-size: 2.4rem; }
+  * h3 {
+    font-size: 2rem;
+    font-weight: bold; }
+  * h6, * a {
+    font-size: 1.2rem; }
+  * body {
+    font-family: "Poppins", sans-serif; }
+    * body .container {
+      width: 80%;
+      margin: 5rem auto;
+      text-align: center; }
+      * body .container .main-title {
+        margin-bottom: 1.5rem; }
+      * body .container .main-tab {
+        overflow: hidden;
+        border: solid 2px gray;
+        background-color: #f1f1f1; }
+        * body .container .main-tab .tab {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px; }
+          * body .container .main-tab .tab:hover {
+            background-color: #ddd; }
+          * body .container .main-tab .tab.active {
+            background-color: black;
+            color: white;
+            font-weight: bold; }
+      * body .container .main-content {
+        display: none;
+        flex-wrap: wrap;
+        padding: 2%;
+        border: solid 2px gray;
+        border-top: none;
+        justify-content: space-between; }
+        * body .container .main-content .content-title {
+          width: 100%;
+          margin-bottom: 1.5rem; }
+        * body .container .main-content .logo {
+          width: 40%;
+          margin-bottom: 1rem; }
+          * body .container .main-content .logo img {
+            max-height: 5rem;
+            vertical-align: middle; }
+        * body .container .main-content .battle-logo {
+          width: 20%; }
+          * body .container .main-content .battle-logo img {
+            max-height: 5rem;
+            vertical-align: middle; }
+        * body .container .main-content .stats-wrapper {
+          width: 100%;
+          display: flex;
+          justify-content: space-between; }
+          * body .container .main-content .stats-wrapper .content-stats {
+            width: 40%;
+            padding: 2.5%;
+            display: flex;
+            flex-direction: column;
+            border: solid 1px #ccc;
+            border-radius: 1rem;
+            gap: 1.5rem; }
+            * body .container .main-content .stats-wrapper .content-stats .stats-desc {
+              width: 100%;
+              display: flex; }
+              * body .container .main-content .stats-wrapper .content-stats .stats-desc .stats-icon {
+                width: 35%; }
+                * body .container .main-content .stats-wrapper .content-stats .stats-desc .stats-icon img {
+                  max-height: 4rem; }
+              * body .container .main-content .stats-wrapper .content-stats .stats-desc .stats-num {
+                width: 65%;
+                vertical-align: middle; }
+                * body .container .main-content .stats-wrapper .content-stats .stats-desc .stats-num h3 {
+                  margin: 10px; }
+                  * body .container .main-content .stats-wrapper .content-stats .stats-desc .stats-num h3 .span-icon {
+                    max-height: 2rem;
+                    vertical-align: middle; }
+        * body .container .main-content .content-rules {
+          width: 100%;
+          margin: 2rem 0;
+          padding: 2.5%;
+          border: solid 1px #ccc;
+          border-radius: 1rem; }
+          * body .container .main-content .content-rules h3 {
+            margin-bottom: 0.75rem; }
+          * body .container .main-content .content-rules h6 {
+            text-align: left; }
+            * body .container .main-content .content-rules h6 img {
+              max-height: 1.2rem;
+              vertical-align: middle; }
+        * body .container .main-content .content-button {
+          width: 100%;
+          text-align: center;
+          margin: 0 0 1.2rem 0; }
+          * body .container .main-content .content-button .fight {
+            width: 25%;
+            display: inline-block;
+            padding: 0.8rem 1.4rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            background-color: #f1f1f1;
+            border-radius: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s; }
+            * body .container .main-content .content-button .fight:hover {
+              background-color: #ddd; }
+        * body .container .main-content .content-result {
+          width: 100%;
+          text-align: center;
+          margin: 0.3rem;
+          padding: 2.5%;
+          font-size: 1rem;
+          border: solid 1px #ccc;
+          border-radius: 1rem;
+          min-height: 16rem; }

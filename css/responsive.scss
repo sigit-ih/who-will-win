@@ -1,0 +1,76 @@
+/* SMARTPHONES, IPHONES, PHONES SMALLER THAN 320px 20em */
+@media (min-width: 0em) {
+  html {
+    font-size: 50%;
+
+    body .container .main-content-wrapper .main-content .choose .matchmaker,
+    body .container .main-content-wrapper .main-content .choose .matchmaker2 {
+      width: 80%;
+    }
+ 
+    body .container .main-content-wrapper .main-content .content-button div input {
+      width: 80%;
+    }
+
+    body .container .main-content-wrapper .main-content .content-button div .fight,
+    body .container .main-content-wrapper .main-content .content-button div .round {
+      width: 80%;
+    }
+  }
+}
+
+/* SMARTPHONES, IPHONES, PORTRAIT 480x320 PHONES 320px 20em */
+@media (min-width: 20em) {
+/*   html {
+    font-size: 50%;
+  } */
+}
+
+/* PORTRAIT E-READERS (NOOK/KONDLE), SMALLER TABLETS @ 600 OR 640 WIDE 481px 30em*/
+@media (min-width: 30em) {
+  html {
+    font-size: 57.5%;
+  }
+}
+
+/* PORTRAIT TABLETS, PORTRAIT IPAD, LANDSCAPE E-READERS, LANDSCAPE 800x480 OR 854x480 PHONES 641px 40em*/
+@media (min-width: 40em) {
+  html {
+    font-size: 65%;
+  }
+}
+
+/* TABLETS, LANDSCAPE IPAD, LO-RES LAPTOPS AND DESKTOPS 961px 60em */
+@media (min-width: 60em) {
+  html {
+    font-size: 95%;
+
+    body .container .main-content-wrapper .main-content .choose .matchmaker, 
+    body .container .main-content-wrapper .main-content .choose .matchmaker2 {
+      width: 25%;
+    }
+
+    body .container .main-content-wrapper .main-content .content-button div input {
+      width: 40%;
+    }
+
+    body .container .main-content-wrapper .main-content .content-button div .fight, 
+    body .container .main-content-wrapper .main-content .content-button div .round {
+      width: 40%;
+    }
+  }
+}
+
+/* BIG LANDSCAPE TABLETS, LAPTOPS, AND DESKTOPS 1025px 64em */
+@media (min-width: 64em) {
+  html {
+    font-size: 100%;
+  }
+}
+
+/* HI-RES LAPTOPS AND DESKTOPS 1281px 80em */
+@media (min-width: 80em) {
+  html {
+    font-size: 100%;
+  }
+}
